@@ -60,4 +60,50 @@ public class GroupTest {
 		assertEquals(1,repo.getNoOfGroups());
 		System.out.println("remove Group method verified correctly");
 	}
+	@Test
+	public void addUserToTheGroupTest()
+	{
+		User user1=new User("user1","100");
+		User user2=new User("user2","100");
+		Service service=new Service();
+		service.addUserToGroup(user1);
+		service.addUserToGroup(user2);
+		assertEquals(2,service.getNoOfUsersOfAGroup());
+		
+	}
+	@Test
+	public void removeUserFromGroupTest()
+	{
+		User user1=new User("user1","100");
+		User user2=new User("user2","100");
+		Service service=new Service();
+		service.addUserToGroup(user1);
+		service.addUserToGroup(user2);
+		service.removeUserFromGroup(user1);
+		assertEquals(1,service.getNoOfUsersOfAGroup());
+	}
+	@Test
+	public void addGroupToGroupTest()
+	{
+		Group group1=new Group("group1","102");
+		Group group2=new Group("group2","103");
+		Service service=new Service();
+		service.addGroupToGroup(group1);
+		service.addGroupToGroup(group2);
+		assertEquals(2,service.getNoOfGroupsOfAGroup());
+		
+		
+	}
+	@Test
+	public void removeGroupFromAGroupTest()
+	{
+		Group group1=new Group("group1","102");
+		Group group2=new Group("group2","103");
+		Service service=new Service();
+		service.addGroupToGroup(group1);
+		service.addGroupToGroup(group2);
+		service.removeGroupFromGroup(group2);
+		assertEquals(1,service.getNoOfGroupsOfAGroup());
+		
+	}
 }

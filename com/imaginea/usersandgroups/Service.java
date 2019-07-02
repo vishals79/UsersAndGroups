@@ -61,6 +61,14 @@ package com.imaginea.usersandgroups;
 			}
 			return groupNames;
 		}
+		public int getNoOfUsersOfAGroup()
+		{
+			return users.size();
+		}
+		public int getNoOfGroupsOfAGroup()
+		{
+			return groups.size();
+		}
 	}
 
 
