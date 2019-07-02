@@ -44,4 +44,28 @@ public class UserTest {
 		assertEquals("101",user.uniqueIdentifier());
 		System.out.println("get uniqueIdentifier method tested correctly");
 	}
+	@Test
+	public void addUserTest()
+	{
+		RepositoryStore repo=new RepositoryStore();
+		User user1=new User("user1","100");
+		User user2=new User("user2","101");
+		repo.addUser(user1);
+		repo.addUser(user2);
+		assertEquals(2,repo.getNoOfUsers());
+		System.out.println("add user method verified correctly");
+	}
+	@Test
+	public void removeUserTest()
+	{
+		RepositoryStore repo=new RepositoryStore();
+		User user1=new User("user1","100");
+		User user2=new User("user2","101");
+		repo.addUser(user1);
+		repo.addUser(user2);
+		repo.removeUser(user1.uniqueIdentifier());
+		assertEquals(1,repo.getNoOfUsers());
+		System.out.println("remove user method verified correctly");
+	}
+	
 }

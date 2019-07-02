@@ -106,4 +106,12 @@ public class RepositoryStore {
 		}
 
 	}
+	public int getNoOfUsers()
+	{
+		return usersMap.size();
+	}
+	public int getNoOfGroups()
+	{
+		return groupMap.size();
+	}
 }

@@ -37,4 +37,27 @@ public class GroupTest {
 		System.out.println("get uniqeuIdentifier verified correctly ");
 		
 	}
+	@Test
+	public void addGroupTest()
+	{
+		RepositoryStore repo=new RepositoryStore();
+		Group group1=new Group("group11","100");
+		Group group2=new Group("group2","101");
+		repo.addGroup(group1);
+		repo.addGroup(group2);
+		assertEquals(2,repo.getNoOfGroups());
+		System.out.println("add Group method verified correctly");
+	}
+	@Test
+	public void removeGroupTest()
+	{
+		RepositoryStore repo=new RepositoryStore();
+		Group group1=new Group("group11","100");
+		Group group2=new Group("group2","101");
+		repo.addGroup(group1);
+		repo.addGroup(group2);
+		repo.removeGroup(group1.uniqueIdentifier());
+		assertEquals(1,repo.getNoOfGroups());
+		System.out.println("remove Group method verified correctly");
+	}
 }
