@@ -9,7 +9,7 @@ public class User {
 		this.userId = userId;
 	}
 
-	User() {
+	public User() {
 		super();
 	}
 

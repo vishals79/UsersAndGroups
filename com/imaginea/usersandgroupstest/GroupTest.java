@@ -1,4 +1,4 @@
-package com.imaginea.usersandgroups;
+package com.imaginea.usersandgroupstest;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -8,6 +8,11 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
+
+import com.imaginea.usersandgroups.Group;
+import com.imaginea.usersandgroups.RepositoryStore;
+import com.imaginea.usersandgroups.Service;
+import com.imaginea.usersandgroups.User;
 
 public class GroupTest {
 	@Test
